@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Input from './Input.js'
 import Todo from './Todo'
 
 export default function HomeScreen() {
@@ -9,6 +10,7 @@ export default function HomeScreen() {
       <Todo task='This is task One' />
       <Todo task='This is task Two' />
       <Todo task='This is task Three' />
+      <Input />
     </View>
   )
 }
@@ -22,6 +24,7 @@ const styles = StyleSheet.create({
   homeHeading: {
     paddingTop: 80,
     fontSize: 24,
-    marginBottom: 20
+    marginBottom: 20,
+    fontWeight: 'bold',
   }
 })

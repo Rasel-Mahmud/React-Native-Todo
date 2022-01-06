@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     width: 24,
     borderRadius: 5,
     backgroundColor: '#55BCF666',
-    opacity: .4,
+    opacity: .9,
     marginRight: 15
   },
   cicle: {
