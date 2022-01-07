@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { StyleSheet, KeyboardAvoidingView, View, Platform, TextInput, TouchableOpacity, Text } from 'react-native'
+import { StyleSheet, KeyboardAvoidingView, View, Platform, TextInput, TouchableOpacity, Text, Keyboard } from 'react-native'
 
 export default function Input({ setTaskList, taskList }) {
   const [task, setTask] = useState('');
 
   const handleAddTaskButton = () => {
     setTaskList([...taskList, task]);
-    setTask('')
+    setTask('');
+    Keyboard.dismiss();
   }
 
   return (

@@ -10,7 +10,7 @@ export default function Todo({task}) {
       </View>
       <View style={styles.cicle}></View>
     </View>
-)
+  )
 }
 
 const styles = StyleSheet.create({
@@ -23,11 +23,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   taskTest: {
     flexDirection: 'row',
     alignItems: 'center',
     flexWrap: 'wrap'
   },
+
   square: {
     height: 24,
     width: 24,
@@ -36,6 +38,7 @@ const styles = StyleSheet.create({
     opacity: .9,
     marginRight: 15
   },
+  
   cicle: {
     backgroundColor: '#fff',
     height: 12,
