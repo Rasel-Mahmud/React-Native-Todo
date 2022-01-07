@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, KeyboardAvoidingView, View, Platform, TextInput, TouchableOpacity, Text, Keyboard } from 'react-native'
+import { addTodo } from './../redux/actions/todoActions'; 
 
 export default function Input({ setTaskList, taskList }) {
   const [task, setTask] = useState('');
@@ -17,7 +18,7 @@ export default function Input({ setTaskList, taskList }) {
     >
         <TextInput style={styles.input} placeholder='Write a task' value={task} onChangeText={setTask} />
 
-        <TouchableOpacity onPress={handleAddTaskButton}>
+        <TouchableOpacity onPress={()=> addTodo(setTaskList)}>
           <View style={styles.addTaskButton}>
             <Text>+</Text>
           </View>
