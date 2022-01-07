@@ -1,16 +1,18 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, View, Text  } from 'react-native'
 import Input from './Input.js'
 import Todo from './Todo'
 
 export default function HomeScreen() {
+  const [taskList, setTaskList] = useState([]);
+
   return (
     <View style={styles.homeContainer}>
       <Text style={styles.homeHeading}>Today's tasks</Text>
-      <Todo task='This is task One' />
-      <Todo task='This is task Two' />
-      <Todo task='This is task Three' />
-      <Input />
+      {
+        taskList && taskList.map(task => <Todo task={task} />)
+      }
+      <Input setTaskList={setTaskList} taskList={taskList} />
     </View>
   )
 }
